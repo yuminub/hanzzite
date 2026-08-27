@@ -6,7 +6,7 @@ name: hanzzite
 description: This is Han's personal OS image with dcli-bootc.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main-nvidia-open
+base-image: ghcr.io/ublue-os/bazzite-nvidia-open
 image-version: stable # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
