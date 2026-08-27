@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: hanzzite
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: This is Han's personal OS image with dcli-bootc.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # You can pin to a specific version of Fedora as well
+base-image: ghcr.io/ublue-os/silverblue-main-nvidia-open
+image-version: stable # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -21,10 +21,11 @@ modules:
     repos:
       copr:
         - atim/starship
+        - theblackdon/dcli-bootc
     install:
       packages:
-        - micro
-        - starship
+        - dcli-bootc
+        - zerotier-one
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
